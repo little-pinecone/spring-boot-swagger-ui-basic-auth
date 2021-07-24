@@ -5,7 +5,9 @@
 ## About this project
 
 This Spring Boot project shows an example configuration of Spring Security and OpenAPI that ensures that only
-authenticated users can call endpoints available through Swagger UI.
+authenticated users can call endpoints available through Swagger UI:
+
+![swagger ui with basic auth for endpointsscreenshot](readme-images/swagger-ui-with-basic-auth-for-endpoints.png)
 
 ## Getting started
 
@@ -23,6 +25,22 @@ You can run the app in a command line with:
 ```shell
 mvn spring-boot:run
 ```
+
+### Visit API documentation
+
+* Swagger UI: http://localhost:8080/swagger-ui.html
+* OpenAPI specification: http://localhost:8080/v3/api-docs
+
+### Default credentials
+
+* username: `spring`
+* password: `spring`
+
+## Features
+
+* Spring Security
+* Basic Authentication in Swagger UI
+* OpenAPI 3 specification
 
 ## Built With
 
