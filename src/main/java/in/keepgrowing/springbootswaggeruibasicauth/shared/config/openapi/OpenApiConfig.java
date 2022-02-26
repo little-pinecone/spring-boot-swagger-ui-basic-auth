@@ -17,12 +17,11 @@ public class OpenApiConfig {
 
     @Bean
     public OpenAPI customOpenAPI(OpenApiProperties properties) {
-        var openApi = new OpenAPI()
-                .info(getInfo(properties));
-
-        addSecurity(openApi);
-
-        return openApi;
+        return new OpenAPI()
+                .info(getInfo(properties))
+                .components(new Components()
+                        .addSecuritySchemes(SCHEME_NAME, createSecurityScheme()))
+                .addSecurityItem(new SecurityRequirement().addList(SCHEME_NAME));
     }
 
     private Info getInfo(OpenApiProperties properties) {
@@ -37,22 +36,6 @@ public class OpenApiConfig {
         return new License()
                 .name("Unlicense")
                 .url("https://unlicense.org/");
-    }
-
-    private void addSecurity(OpenAPI openApi) {
-        var components = createComponents();
-        var securityItem = new SecurityRequirement().addList(SCHEME_NAME);
-
-        openApi
-                .components(components)
-                .addSecurityItem(securityItem);
-    }
-
-    private Components createComponents() {
-        var components = new Components();
-        components.addSecuritySchemes(SCHEME_NAME, createSecurityScheme());
-
-        return components;
     }
 
     private SecurityScheme createSecurityScheme() {
