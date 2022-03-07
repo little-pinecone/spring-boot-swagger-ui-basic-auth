@@ -44,7 +44,7 @@ mvn spring-boot:run
 
 ## Built With
 
-* [Spring Boot v2.5+](https://spring.io/projects/spring-boot)
+* [Spring Boot v2.6+](https://spring.io/projects/spring-boot)
 * [Maven](https://maven.apache.org/)
 * [springdoc-openapi](https://springdoc.org/)
 * [Dummy4j](https://daniel-frak.github.io/dummy4j/)
