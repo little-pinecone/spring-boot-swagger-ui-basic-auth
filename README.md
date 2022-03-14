@@ -9,6 +9,10 @@ authenticated users can call endpoints available through Swagger UI:
 
 ![swagger ui with basic auth for endpointsscreenshot](readme-images/swagger-ui-with-basic-auth-for-endpoints.png)
 
+## Prerequisites
+* JDK 13+
+* [Maven](https://maven.apache.org/) (or you can use mvnw provided in the project)
+
 ## Getting started
 
 First, [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
